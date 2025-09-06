@@ -11,3 +11,83 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* index.css - simple centered card */
+:root {
+  --bg: #f3f6f9;
+  --card: #ffffff;
+  --accent: #0b72ff;
+  --muted: #6b7280;
+}
+
+* { box-sizing: border-box; }
+body, html, #root { height: 100%; margin: 0; font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background: var(--bg); }
+
+.app-root {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+}
+
+.card {
+  width: 100%;
+  max-width: 720px;
+  background: var(--card);
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(11, 23, 40, 0.06);
+  padding: 28px;
+}
+
+.title { margin: 0; font-size: 22px; }
+.subtitle { margin: 6px 0 18px; color: var(--muted); font-size: 13px; }
+
+.search-form { display: flex; gap: 10px; margin-bottom: 12px; }
+.input {
+  flex: 1;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #e6e9ee;
+  outline: none;
+  font-size: 14px;
+}
+.input:focus { box-shadow: 0 0 0 4px rgba(11,114,255,0.08); border-color: var(--accent); }
+
+.btn {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: none;
+  background: var(--accent);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+.btn:disabled { opacity: 0.7; cursor: default; }
+
+.error { color: #b00020; margin-top: 8px; }
+
+.weather-card {
+  margin-top: 16px;
+  padding: 16px;
+  border-radius: 10px;
+  background: linear-gradient(180deg, rgba(11,114,255,0.04), rgba(255,255,255,0));
+  border: 1px solid rgba(11,114,255,0.06);
+}
+
+.weather-header { display:flex; justify-content: space-between; gap: 12px; align-items:center; }
+.city { font-weight: 700; font-size: 16px; }
+.coords { color: var(--muted); font-size: 12px; }
+
+.weather-main { display:flex; align-items:center; gap: 16px; margin-top: 12px; }
+.emoji { font-size: 48px; }
+.temp { display:flex; flex-direction: column; }
+.deg { font-size: 28px; font-weight: 700; }
+.desc { color: var(--muted); font-size: 13px; }
+
+.weather-details { display:flex; gap: 16px; margin-top: 12px; color: var(--muted); font-size: 13px; flex-wrap:wrap; }
+
+.footer-note { margin-top: 10px; font-size: 12px; color: var(--muted); }
+.footer-note a { color: var(--accent); text-decoration: none; }
+
+.notes { margin-top: 14px; color: var(--muted); font-size: 13px; }
